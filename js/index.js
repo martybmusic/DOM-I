@@ -40,3 +40,63 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const nav = document.querySelector('nav');
+const navItem = nav.querySelectorAll('a');
+navItem[0].textContent = siteContent['nav']['nav-item-1']
+navItem[1].textContent = siteContent['nav']['nav-item-2']
+navItem[2].textContent = siteContent['nav']['nav-item-3']
+navItem[3].textContent = siteContent['nav']['nav-item-4']
+navItem[4].textContent = siteContent['nav']['nav-item-5']
+navItem[5].textContent = siteContent['nav']['nav-item-6'];
+
+const ctaPic = document.getElementById('cta-img');
+ctaPic.setAttribute('src', siteContent['cta']['img-src']);
+
+let cta = siteContent['cta']['h1'].split(' ');
+const title = document.getElementsByTagName('h1')[0];
+title.innerHTML = cta.join('<br>');
+
+const middlePic = document.getElementById('middle-img');
+middlePic.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const button = document.getElementsByTagName('button')[0];
+button.innerText = siteContent['cta']['button'];
+
+const mainContent = document.querySelector('.main-content');
+const mainItem = mainContent.querySelectorAll('h4');
+const mainText = mainContent.querySelectorAll('p');
+mainItem[0].textContent = siteContent['main-content']['features-h4'];
+mainItem[1].textContent = siteContent['main-content']['about-h4'];
+mainItem[2].textContent = siteContent['main-content']['services-h4'];
+mainItem[3].textContent = siteContent['main-content']['product-h4'];
+mainItem[4].textContent = siteContent['main-content']['vision-h4'];
+mainText[0].textContent = siteContent['main-content']['features-content'];
+mainText[1].textContent = siteContent['main-content']['about-content'];
+mainText[2].textContent = siteContent['main-content']['services-content'];
+mainText[3].textContent = siteContent['main-content']['product-content'];
+mainText[4].textContent = siteContent['main-content']['vision-content'];
+
+const contact = document.querySelector('.contact');
+const contactTitle = contact.querySelector('h4');
+let contactText = contact.querySelectorAll('p');
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent['contact']['phone'];
+contactText[2].textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer');
+const year = footer.querySelector('p');
+year.textContent = siteContent['footer']['copyright'];
+
+navItem.forEach((item) => {
+  item.style.color = 'green';
+});
+
+const addOne = navItem[0].cloneNode(true);
+addOne.textContent = 'World Peace';
+nav.prepend(addOne);
+
+const joy = navItem[0].cloneNode(true);
+joy.textContent = 'Joy';
+nav.appendChild(joy);
