@@ -77,3 +77,14 @@ mainText[2].textContent = siteContent['main-content']['services-content'];
 mainText[3].textContent = siteContent['main-content']['product-content'];
 mainText[4].textContent = siteContent['main-content']['vision-content'];
 
+const contact = document.querySelector('.contact');
+const contactTitle = contact.querySelector('h4');
+const contactText = contact.querySelectorAll('p');
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent['contact']['phone'];
+contactText[2].textContent = siteContent['contact']['email'];
+
+
+
+
