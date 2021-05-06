@@ -60,4 +60,17 @@ title.innerHTML = cta.join('<br>');
 const middlePic = document.getElementById('middle-img');
 middlePic.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
+const button = document.getElementsByTagName('button')[0];
+button.innerText = siteContent['cta']['button'];
+
+const mainContent = document.querySelector('.main-content');
+const mainItem = mainContent.querySelectorAll('h4');
+const mainText = mainContent.querySelectorAll('p');
+mainItem[0].textContent = siteContent['main-content']['features-h4'];
+mainItem[1].textContent = siteContent['main-content']['about-h4'];
+mainItem[2].textContent = siteContent['main-content']['services-h4'];
+mainItem[3].textContent = siteContent['main-content']['product-h4'];
+mainItem[4].textContent = siteContent['main-content']['vision-h4'];
+mainText[0].textContent = siteContent['main-content']['features-content'];
+mainText[1].textContent = siteContent['main-content']['about-content'];
 
