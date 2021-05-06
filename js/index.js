@@ -79,11 +79,15 @@ mainText[4].textContent = siteContent['main-content']['vision-content'];
 
 const contact = document.querySelector('.contact');
 const contactTitle = contact.querySelector('h4');
-const contactText = contact.querySelectorAll('p');
+let contactText = contact.querySelectorAll('p');
 contactTitle.textContent = siteContent['contact']['contact-h4'];
 contactText[0].textContent = siteContent['contact']['address'];
 contactText[1].textContent = siteContent['contact']['phone'];
 contactText[2].textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer');
+const year = footer.querySelector('p');
+year.textContent = siteContent['footer']['copyright'];
 
 
 
