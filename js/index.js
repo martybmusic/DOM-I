@@ -89,6 +89,14 @@ const footer = document.querySelector('footer');
 const year = footer.querySelector('p');
 year.textContent = siteContent['footer']['copyright'];
 
+navItem.forEach((item) => {
+  item.style.color = 'green';
+});
 
+const addOne = navItem[0].cloneNode(true);
+addOne.textContent = 'World Peace';
+nav.prepend(addOne);
 
-
+const joy = navItem[0].cloneNode(true);
+joy.textContent = 'Joy';
+nav.appendChild(joy);
