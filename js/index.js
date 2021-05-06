@@ -73,4 +73,7 @@ mainItem[3].textContent = siteContent['main-content']['product-h4'];
 mainItem[4].textContent = siteContent['main-content']['vision-h4'];
 mainText[0].textContent = siteContent['main-content']['features-content'];
 mainText[1].textContent = siteContent['main-content']['about-content'];
+mainText[2].textContent = siteContent['main-content']['services-content'];
+mainText[3].textContent = siteContent['main-content']['product-content'];
+mainText[4].textContent = siteContent['main-content']['vision-content'];
 
